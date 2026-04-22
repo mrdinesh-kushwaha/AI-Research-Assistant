@@ -1,6 +1,6 @@
 #AI Research Assistant (Spring Boot + Gemini API)
-🚀 Overview
 
+🚀 Overview
 An AI-powered backend application that processes user-provided content and leverages the Gemini API to generate intelligent summaries and topic suggestions.
 
 This project demonstrates real-world integration of Spring Boot microservice architecture with external AI APIs.
@@ -41,6 +41,7 @@ POST /research
   "operation": "summarize",
   "content": "Your text here..."
 }
+
 🔹 Supported Operations
 summarize → Generate concise summary
 suggest → Suggest related topics
@@ -49,24 +50,26 @@ suggest → Suggest related topics
 🔑 Configuration
 
 Add your API credentials:
-
 gemini.api.url=YOUR_API_URL
 gemini.api.key=YOUR_API_KEY
+
 🧪 How to Run
 git clone https://github.com/mrdinesh-kushwaha/AI-Research-Assistant.git
 cd AI-Research-Assistant
 mvn spring-boot:run
+
 💡 Key Learnings
 Integration of external AI APIs in backend systems
 Handling structured JSON responses using Jackson
 Using WebClient for non-blocking HTTP calls
 Designing clean service-layer architecture
+
 🔮 Future Enhancements
 Add JWT-based authentication
 Convert to fully reactive (non-blocking flow)
 Add frontend (React UI)
 Add caching for repeated queries
-👨‍💻 Author
 
+👨‍💻 Author
 Dinesh Kushwaha
 Software Developer | Java Backend Enthusiast
