@@ -1,75 +1,76 @@
-#AI Research Assistant (Spring Boot + Gemini API)
+# 🚀 AI Research Assistant (Spring Boot + Gemini API)
 
-🚀 Overview
-An AI-powered backend application that processes user-provided content and leverages the Gemini API to generate intelligent summaries and topic suggestions.
+An AI-powered backend application that processes user input and leverages the Gemini API to generate intelligent summaries and topic suggestions.
 
-This project demonstrates real-world integration of Spring Boot microservice architecture with external AI APIs.
+---
 
-✨ Key Features
-🔍 Intelligent text summarization
-💡 Context-based topic suggestions
-🌐 REST API architecture
-⚡ External API integration (Gemini)
-📦 Structured JSON request/response handling
-🛠️ Tech Stack
-Java 21
-Spring Boot
-Spring WebFlux (WebClient)
-Jackson (ObjectMapper)
-REST APIs
-🧠 System Design / Flow
-Client Request
-      ↓
-Controller Layer
-      ↓
-Service Layer (Business Logic)
-      ↓
-Prompt Builder
-      ↓
-Gemini API (External Call)
-      ↓
-JSON Response
-      ↓
-Response Parsing (ObjectMapper)
-      ↓
-Final Output to Client
-⚙️ API Usage
-🔹 Endpoint
-POST /research
-🔹 Request Body
+## 📌 Overview
+
+This project demonstrates real-world integration of a **Spring Boot backend** with an external **AI API (Gemini)**.
+
+It allows users to:
+- Summarize large text content
+- Get intelligent topic suggestions
+
+---
+
+## ✨ Key Features
+
+- 🔍 Intelligent text summarization  
+- 💡 Context-based topic suggestions  
+- 🌐 REST API architecture
+- ✨ Lombok 
+- ⚡ External API integration (Gemini)  
+- 📦 JSON request/response handling  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Java 21**
+- **Spring Boot**
+- **Spring WebFlux (WebClient)**
+- **Jackson (ObjectMapper)**
+- **REST APIs**
+
+---
+
+## 🧠 System Flow
+
+Client Request  
+↓  
+Controller Layer  
+↓  
+Service Layer (Business Logic)  
+↓  
+Prompt Builder  
+↓  
+Gemini API (External Call)  
+↓  
+JSON Response  
+↓  
+Response Parsing (ObjectMapper)  
+↓  
+Final Output  
+
+---
+
+
+### 🔹 Request Body
+```json
 {
   "operation": "summarize",
   "content": "Your text here..."
 }
 
-🔹 Supported Operations
-summarize → Generate concise summary
-suggest → Suggest related topics
-🔹 Response
-"Generated AI response..."
-🔑 Configuration
+## 🔑 Configuration
 
-Add your API credentials:
+Add your Gemini API credentials in application.properties:
+
 gemini.api.url=YOUR_API_URL
 gemini.api.key=YOUR_API_KEY
 
-🧪 How to Run
+## 🧪 How to Run
 git clone https://github.com/mrdinesh-kushwaha/AI-Research-Assistant.git
 cd AI-Research-Assistant
 mvn spring-boot:run
-
-💡 Key Learnings
-Integration of external AI APIs in backend systems
-Handling structured JSON responses using Jackson
-Using WebClient for non-blocking HTTP calls
-Designing clean service-layer architecture
-
-🔮 Future Enhancements
-Add JWT-based authentication
-Convert to fully reactive (non-blocking flow)
-Add frontend (React UI)
-Add caching for repeated queries
-
-👨‍💻 Author
-Dinesh Kushwaha
-Software Developer | Java Backend Enthusiast
